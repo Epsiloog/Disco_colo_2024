@@ -2,10 +2,10 @@ import pygame
 from time import sleep
 
 running = True
+pygame.init()
+screen = pygame.display.set_mode((1000,1000))
 
 while running:
-    pygame.init()
-    screen = pygame.display.set_mode((1000,1000))
     screen.fill((255,128,0))
     pygame.display.flip()
     sleep(0.5)

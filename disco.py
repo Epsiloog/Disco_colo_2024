@@ -24,6 +24,11 @@ stream = p.open(format=FORMAT,
 
 print("Enregistrement...")
 
+# Visualisation avec Pygame
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+screen.fill((255, 255, 255))
+
 # Boucle principale
 try:
     while True:
@@ -42,11 +47,6 @@ try:
         intensite = np.max(fft_data)
 
         print(f"Fréquence dominante: {freq_dominante} Hz, Intensité: {intensite}")
-
-        # Visualisation avec Pygame
-        pygame.init()
-        screen = pygame.display.set_mode((800, 600))
-        screen.fill((255, 255, 255))
 
         # Déterminer la couleur et la taille en fonction de la fréquence et de l'intensité
         couleur = (int(min(255, freq_dominante / 2)), 0, int(min(255, intensite / 1000)))
