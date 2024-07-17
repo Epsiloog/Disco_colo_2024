@@ -50,7 +50,7 @@ try:
 
         # Déterminer la couleur et la taille en fonction de la fréquence et de l'intensité
         couleur = (int(min(255, freq_dominante / 2)), 0, int(min(255, intensite / 1000)))
-        taille = int(min(100, intensite / 1000))
+        taille = int(min(100, intensite / 1000)) + 200
 
         # Dessiner une forme (par exemple, un cercle)
         pygame.draw.circle(screen, couleur, (400, 300), taille)
@@ -72,4 +72,3 @@ finally:
     stream.close()
     p.terminate()
     pygame.quit()
-
